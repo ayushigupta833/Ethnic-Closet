@@ -1,0 +1,199 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Clean and modern sans-serif font */
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav li:hover {
+    color: #ff5e62; /* Vibrant red accent */
+}
+
+/* Hero Section */
+.imgg {
+    position: relative;
+    background-color: #f0f4f8; /* Light blue-gray background */
+    height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hhhhh {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333333;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 10;
+    line-height: 1.2;
+}
+
+.hhhhh span {
+    color: #ff5e62; /* Red accent for "New Arrivals" */
+}
+
+.btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #ff5e62;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e64c4f;
+    transform: translateY(-3px);
+}
+
+.image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.95;
+    transition: opacity 0.3s ease;
+}
+
+.image:hover {
+    opacity: 1;
+}
+
+/* Product Section */
+.product {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.first, .second, .third {
+    width: 200px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.first:hover, .second:hover, .third:hover {
+    transform: translateY(-5px);
+}
+
+.men-img, .women-img, .acc-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.first:hover .men-img,
+.second:hover .women-img,
+.third:hover .acc-img {
+    transform: scale(1.1);
+}
+
+.text-overlay, .men-tag, .accesories-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 94, 98, 0.9);
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn, .men-btn, .acc-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.text-overlay:hover, .men-tag:hover, .accesories-tag:hover {
+    background-color: #e64c4f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hhhhh {
+        font-size: 2rem;
+        top: 15%;
+        left: 5%;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        top: 35%;
+        left: 5%;
+    }
+
+    .image {
+        width: 60%;
+        height: 400px;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .first, .second, .third {
+        width: 150px;
+        height: 230px;
+    }
+
+    .men-img, .women-img, .acc-img {
+        height: 230px;
+    }
+}

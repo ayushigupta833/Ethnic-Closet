@@ -1,0 +1,360 @@
+.Homeli {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4c2b0;
+    color: #2d2d2d;
+    overflow-x: hidden;
+    line-height: 1.6;
+    margin: 0;
+
+}
+
+
+.title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: linear-gradient(180deg, #ffffff, #f8f8f8);  */
+     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);  */
+}
+
+.title svg {
+    margin-left: 12px;
+    color: #e63946;
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.title svg:hover {
+    transform: scale(1.2);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 0; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 50px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    text-decoration: none;
+}
+
+.nav li {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2d2d2d;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav li:hover {
+    color: #e63946;
+}
+
+.nav li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #e63946;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav li:hover::after {
+    width: 100%;
+}
+
+
+.img-cls {
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0  120px;
+    background: #ffddd2;
+    min-height: 600px;
+    flex-wrap: wrap;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+
+}
+ 
+
+.img-cls::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3), transparent);
+    z-index: 0;
+}
+
+.home-text {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+}
+
+.home-heading {
+    font-size: 60px;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.home-heading span {
+    color: #e63946;
+    display: block;
+}
+
+.home-btn {
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(90deg, #e63946, #f4a261);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+}
+
+.home-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.5);
+}
+
+.home {
+    width: 45%;
+    max-height: 500px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+    background-color: #ffddd2;
+}
+
+
+.product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 80px 60px;
+    background-color: #ffffff;
+    justify-items: center;
+}
+
+.product div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    transition: transform 0.4s ease;
+}
+
+.product div:hover img {
+    transform: scale(1.05);
+}
+
+.product button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #e63946, #f4a261);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.product button:hover {
+    background: linear-gradient(90deg, #f4a261, #e63946);
+    transform: translateX(-50%) translateY(-3px);
+}
+
+.cart-icon {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    left: 380px;
+}
+
+.cart-icon:hover {
+    color: brown;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.logooo {
+    height: 50px;
+    width: 120px;
+    position: relative;
+    right: 380px;
+}
+
+.logooo:hover {
+    border: 10px black solid;
+}
+
+
+@media (max-width: 1024px) {
+    .img-cls {
+        padding: 60px 40px;
+    }
+
+    .home-heading {
+        font-size: 48px;
+    }
+
+    .home {
+        width: 50%;
+    }
+
+    .product {
+        padding: 60px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 28px;
+        padding: 20px 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-bar {
+        padding: 20px;
+    }
+
+    .img-cls {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .home-text {
+        max-width: 100%;
+    }
+
+    .home-heading {
+        font-size: 36px;
+    }
+
+    .home-btn {
+        margin: 20px auto;
+    }
+
+    .home {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .product {
+        padding: 40px 20px;
+    }
+
+    .cart-icon {
+        left: 0;
+    }
+
+    .logooo {
+        right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+        padding: 15px 20px;
+    }
+
+    .home-heading {
+        font-size: 28px;
+    }
+
+    .home-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .product img {
+        height: 180px;
+    }
+}

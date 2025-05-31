@@ -1,0 +1,192 @@
+/* .product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 32px;
+    background-color: #fafafa;
+  }
+  
+  .product-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+  
+  .product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 8px;
+  }
+  
+  .discounted-price {
+    color: #e60023;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .btn1 {
+    margin-top: 10px;
+    padding: 10px 16px;
+    background-color: #e60023;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn1:hover {
+    background-color: #cc001f;
+    transform: scale(1.05);
+  }
+
+
+
+ */
+
+
+
+
+ .product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 32px;
+    background-color: var(--bg);
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 16px;
+    position: relative;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+  
+  /* 30% OFF Badge */
+  .discount-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #e60023;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 6px;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 8px;
+  }
+  
+  .discounted-price {
+    color: #e60023;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .btn1 {
+    margin-top: 10px;
+    padding: 10px 16px;
+    background-color: #e60023;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn1:hover {
+    background-color: #cc001f;
+    transform: scale(1.05);
+  }
+  
+  /* Dark mode compatibility */
+  .dark-mode {
+    --bg: #121212;
+    --card-bg: #1f1f1f;
+    --text: #f1f1f1;
+  }
+  
+  :root {
+    --bg: #fafafa;
+    --card-bg: #fff;
+    --text: #333;
+  }
+  
